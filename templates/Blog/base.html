@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'Blog/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'Blog/css/bootstrap.min.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="{% static 'Blog/js/bootstrap.min.js' %}"></script>
+</head>
+<body class="body-container">
+  <div class="main-container">
+    <!-- top bar -->
+    <div class="top-bar">
+      <div class="top-bar-sub1">
+        <div class="logo-container"></div>
+        <div class="top-bar-button-container">
+          <div class="top-bar-button cave"></div>
+          <div class="top-bar-button chinese"></div>
+        </div>
+      </div>
+      
+      <div class="top-bar-sub2">
+        
+      </div>
+      <!-- add your top bar content here -->
+    </div>
+
+    <!-- content section -->
+    <div class="content">
+          {% block content %}
+          {% endblock %}
+    </div>
+
+    
+  </div>
+  <!-- bottom bar -->
+  <div class="bottom-bar"> 
+    <!-- add your bottom bar content here -->
+    bottom
+  </div>
+</body>
+</html>
